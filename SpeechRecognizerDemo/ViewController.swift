@@ -23,7 +23,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
         }
         
         // Grab a local audio sample to parse
-        let filePath: String = Bundle.main().pathForResource("sample2", ofType: "mp3")!
+        let filePath: String = Bundle.main().pathForResource("one_more_thing", ofType: "mp3")!
         print("\(filePath)")
         let fileURL: NSURL = URL(fileURLWithPath: filePath)
         

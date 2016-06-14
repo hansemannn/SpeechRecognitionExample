@@ -12,7 +12,7 @@
 		3A441A091D1082C80089BC68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A441A071D1082C80089BC68 /* Main.storyboard */; };
 		3A441A0B1D1082C80089BC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A441A0A1D1082C80089BC68 /* Assets.xcassets */; };
 		3A441A0E1D1082C80089BC68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A441A0C1D1082C80089BC68 /* LaunchScreen.storyboard */; };
-		3A441A181D1095860089BC68 /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A441A171D1095860089BC68 /* sample2.mp3 */; };
+		3AA2BB291D10BA6900412106 /* one_more_thing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3AA2BB281D10BA6900412106 /* one_more_thing.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		3A441A0A1D1082C80089BC68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A441A0D1D1082C80089BC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A441A0F1D1082C80089BC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A441A171D1095860089BC68 /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sample2.mp3; path = ../../../../Desktop/sample2.mp3; sourceTree = "<group>"; };
+		3AA2BB281D10BA6900412106 /* one_more_thing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = one_more_thing.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,8 @@
 				3A441A031D1082C80089BC68 /* AppDelegate.swift */,
 				3A441A051D1082C80089BC68 /* ViewController.swift */,
 				3A441A071D1082C80089BC68 /* Main.storyboard */,
-				3A441A171D1095860089BC68 /* sample2.mp3 */,
 				3A441A0A1D1082C80089BC68 /* Assets.xcassets */,
+				3AA2BB281D10BA6900412106 /* one_more_thing.mp3 */,
 				3A441A0C1D1082C80089BC68 /* LaunchScreen.storyboard */,
 				3A441A0F1D1082C80089BC68 /* Info.plist */,
 			);
@@ -129,7 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A441A0E1D1082C80089BC68 /* LaunchScreen.storyboard in Resources */,
-				3A441A181D1095860089BC68 /* sample2.mp3 in Resources */,
+				3AA2BB291D10BA6900412106 /* one_more_thing.mp3 in Resources */,
 				3A441A0B1D1082C80089BC68 /* Assets.xcassets in Resources */,
 				3A441A091D1082C80089BC68 /* Main.storyboard in Resources */,
 			);
@@ -301,6 +301,7 @@
 				3A441A141D1082C80089BC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
