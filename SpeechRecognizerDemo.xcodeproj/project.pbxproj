@@ -58,13 +58,21 @@
 			children = (
 				3A441A031D1082C80089BC68 /* AppDelegate.swift */,
 				3A441A051D1082C80089BC68 /* ViewController.swift */,
+				DBEFE40D1E44CFBC0046D559 /* Resources */,
+			);
+			path = SpeechRecognizerDemo;
+			sourceTree = "<group>";
+		};
+		DBEFE40D1E44CFBC0046D559 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				3A441A071D1082C80089BC68 /* Main.storyboard */,
 				3A441A0A1D1082C80089BC68 /* Assets.xcassets */,
 				3AA2BB281D10BA6900412106 /* one_more_thing.mp3 */,
 				3A441A0C1D1082C80089BC68 /* LaunchScreen.storyboard */,
 				3A441A0F1D1082C80089BC68 /* Info.plist */,
 			);
-			path = SpeechRecognizerDemo;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,7 +102,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Appcelerator;
 				TargetAttributes = {
 					3A4419FF1D1082C80089BC68 = {
@@ -184,8 +192,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -232,8 +242,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -262,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6K4KHD4NQF;
 				INFOPLIST_FILE = SpeechRecognizerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.SpeechRecognizerDemo;
@@ -274,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6K4KHD4NQF;
 				INFOPLIST_FILE = SpeechRecognizerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.SpeechRecognizerDemo;

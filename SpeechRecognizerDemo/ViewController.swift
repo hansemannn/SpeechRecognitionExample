@@ -14,37 +14,40 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate, SFSpeechReco
     @IBAction func didTapSpeechRecognitionButton() {
         
         // Initialize the speech recogniter with your preffered language
-        let speechRecognizer = SFSpeechRecognizer(locale: Locale(localeIdentifier: "en_US"))
-        
-        // Check the availability. It currently only works on the device
-        if (speechRecognizer?.isAvailable == false) {
-            print("Speech recognizer is not available!")
+        guard let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en_US")) else {
+            print("Speech recognizer is not available for this locale!")
             return
         }
         
-        // Grab a local audio sample to parse
-        let filePath: String = Bundle.main().pathForResource("one_more_thing", ofType: "mp3")!
-        print("\(filePath)")
-        let fileURL: NSURL = URL(fileURLWithPath: filePath)
+        // Check the availability. It currently only works on the device
+        if (speechRecognizer.isAvailable == false) {
+            print("Speech recognizer is not available for this device!")
+            return
+        }
         
-        // Get the party started and watch for results in the completion block.
-        // It gets fired every time a new word (aka transcription) gets detected.
-        let recognizer = SFSpeechRecognizer()
-        let request = SFSpeechURLRecognitionRequest(url: fileURL as URL)
-        recognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
-            print (result?.bestTranscription.formattedString)
-        })
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            if (authStatus == .authorized) {
+                // Grab a local audio sample to parse
+                let fileURL = URL(fileURLWithPath: Bundle.main.path(forResource: "one_more_thing", ofType: "mp3")!)
+                
+                // Get the party started and watch for results in the completion block.
+                // It gets fired every time a new word (aka transcription) gets detected.
+                let request = SFSpeechURLRecognitionRequest(url: fileURL)
+                
+                speechRecognizer.recognitionTask(with: request, resultHandler: { (result, error) in
+                    print(result?.bestTranscription ?? "")
+                    
+                    if (result?.isFinal)! {
+                        let alert = UIAlertController(title: "Speech recognition completed!", message: result?.bestTranscription.formattedString, preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.show(alert, sender: self)
+                    }
+                })
+            } else {
+                print("Error: Speech-API not authorized!");
+            }
+        }
     }
     
     // MARK: Speech Recognizer Delegate (only called when using the advanced recognition technique)

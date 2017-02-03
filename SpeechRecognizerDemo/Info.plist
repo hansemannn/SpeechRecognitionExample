@@ -44,6 +44,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Can we parse your spoken words?</string>
+	<string>Can we parse your spoken/recorded words-transcriptions?</string>
 </dict>
 </plist>
